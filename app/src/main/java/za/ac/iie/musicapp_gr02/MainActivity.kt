@@ -1,6 +1,7 @@
 package za.ac.iie.musicapp_gr02
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        var songDisplay = findViewById<TextView>(R.id.songDisplay)
 
         Song("Ordinary", "Alex Warren", 2026, "2.5")
         Song("Swim", "BTS", 2026, "3.5")
