@@ -2,7 +2,7 @@ package za.ac.iie.musicapp_gr02
 
 import android.util.Log
 
-class Song (songName: String,songArtist: String, songYear: Int,songDuration: String){
+class Song (songName: String, songArtist: String, songYear: Int,songDuration: String){
 
     //adding variables for song object's attributes
     var name : String  = ""
@@ -12,6 +12,9 @@ class Song (songName: String,songArtist: String, songYear: Int,songDuration: Str
 
     //added secondary constructor, if user only have name and artist
     constructor(songName: String,songArtist: String): this(songName,songArtist,0,"")
+
+    //secondary constructor accomodating users who don't know the artist and the year
+    constructor(songName: String, songDuration: String, songYear: Int): this(songName,"",0,songDuration)
 
     //initializing the variables/attributes for the song objects
     init{
@@ -39,7 +42,7 @@ class Song (songName: String,songArtist: String, songYear: Int,songDuration: Str
 
     }
 
-    //function o favorite a song
+    //function to favorite a song
     fun Favorite(): Boolean{
         Log.v("Song", "$name is favorited")
         return true
