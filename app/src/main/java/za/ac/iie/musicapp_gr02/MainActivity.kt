@@ -19,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         var song1 = Song("Ordinary", "Alex Warren", 2026, "2.5")
         var song2= Song("Swim", "BTS", 2026, "3.5")
         var song3= Song("So Easy", "Olivia Dean")
-        var song4= Song("Unstoppable", "3;37",1)
-        var song5=
+        var song4= Song("Unstoppable", "3;37",0)
+        var song5= Song("Halo", "3:44",0)
+
         //creating array to hold songs
-        var songs = arrayOf<Song>(song1, song2, song3)
+        var songs = arrayOf<Song>(song1, song2, song3, song4, song5)
 
         //for loop to loop through and display items to song array
         for (song in songs){
